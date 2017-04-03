@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+    <head>Online Calculator</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+    $(function(){
+    $("#price").click(function(){
+        var sum = 0;
+        $('#price :checked').each(function(){
+            sum += parseInt($(this).val());
+        });
+        $('.sum').text(sum);
+    });
+});
+</script>
+<div id = "price">
+    <input type="checkbox" id="box1" name="box1" value="200"><label for="box1">SSD 120Gb - 200$</label><br/>
+    <input type="checkbox" id="box2" name="box2" value="300"><label for="box2">SSD 240Gb - 300$</label><br/>
+    <input type="checkbox" id="box3" name="box3" value="320"><label for="box3">SSD 320Gb - 320$</label><br/>
+    <input type="checkbox" id="box4" name="box4" value="400"><label for="box4">SSD 500Gb - 400$</label><br/>
+    <input type="checkbox" id="box5" name="box5" value="450"><label for="box5">SSD 750Gb - 450$</label><br/>
+    <input type="checkbox" id="box6" name="box6" value="600"><label for="box6">SSD 1000Gb - 600$</label><br/>
+</div>
+<p>Total: <span class="sum">0</span> $</p>
+</html>
